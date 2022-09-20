@@ -17,10 +17,10 @@ class CreateTrainsTable extends Migration
             $table->id();
             $table->timestamps();
             $table->string('azienda', 30);
-            $table->string('stazione_di_partenza', 30);
-            $table->string('stazione_di_arrivo', 30);
-            $table->smallInteger('orario_di_partenza');
-            $table->smallInteger('orario_di_arrivo');
+            $table->string('stazione_di_partenza');
+            $table->string('stazione_di_arrivo');
+            $table->integer('orario_di_partenza');
+            $table->integer('orario_di_arrivo');
             $table->integer('codice_treno')->unsigned();
             $table->integer('numero_carrozze')->unsigned();
             $table->boolean('in_orario')->default(1);
